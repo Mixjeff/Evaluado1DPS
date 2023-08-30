@@ -1,32 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import {useState } from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { data } from './data';
+import { data } from './Data';
+import PropTypes from 'prop-types';
 
+export default function SelectMovies({onDataSelect}) {
 
-export default function SelectMovies() {
-
-    const [OpcionSeleccionada, setOpcionSeleccionada] = useState("")
+    const [OpcionSeleccionada, setOpcionSeleccionada] = useState('');
     const handleChange = (event) => {
+        const selectedId = data.find(pelicula => pelicula.titulo === event.target.value)?.id;
+        if (selectedId !== undefined) {
+            onDataSelect(selectedId);
+        }
         setOpcionSeleccionada(event.target.value);
     }
-    useEffect(() => {
-        setOpcionSeleccionada(data);
-      }, []);
     return (
-        <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+        <FormControl fullWidth>
             <InputLabel id="demo-select-small-label">Peliculas</InputLabel>
             <Select
                 labelId="demo-select-small-label"
                 id="demo-select-small"
                 value={OpcionSeleccionada}
-                label="Vacio"
+                label="Peliculas"
                 onChange={handleChange}
             >
-                {data.map((pelicula) => (
-                    <MenuItem  value={pelicula.titulo}>
+                {data.map((pelicula,id) => (
+                    <MenuItem key={id} value={pelicula.titulo}>
                         {pelicula.titulo}
                     </MenuItem>
                 ))}
@@ -36,3 +37,6 @@ export default function SelectMovies() {
     );
 }
 
+SelectMovies.propTypes={
+    onDataSelect:PropTypes.string,
+};

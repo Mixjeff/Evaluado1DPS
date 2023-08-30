@@ -1,16 +1,16 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import SelectMovies from './componets/picker';
+
+import AutoGrid from './components/AutoGrid';
 
 function App() {
-  //Estado
-  //Ciclo de vida
-  //JSX
+
   return (
-    <div class='App'>
-      <h1>Lista de compras</h1>
-      <SelectMovies/>
-    </div>
+    <>
+      
+      <AutoGrid></AutoGrid>
+
+      
+
+    </>
   )
 }
 
