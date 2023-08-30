@@ -1,8 +1,9 @@
-# React + Vite
+# Evaluado 1, practico ejercicio 1 de DPS 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En este evaluado se creo un carrito de compras sin imagenes, cargado con un json seleccionado con picker e input number
+Se utilizó elementos de Material UI 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Documento de evidencias] (https://docs.google.com/document/d/1uCmYgZaEUd8r2jWruaMFaU-SH4i_xGSIKyaOlPoC2G0/edit?usp=sharing)+
+- [Material UI ] (https://mui.com/material-ui/getting-started/)
+
